@@ -1,10 +1,10 @@
-const { Schema } = require("mongoose");
+const { Schema, default: mongoose } = require("mongoose");
 
 // Schema to create Reaction - will not have associated model, but rather will be used at the reaction field's subdocument schema in the Thought model
 const reactionSchema = new Schema({
   reactionId: {
     type: Schema.Types.ObjectId,
-    default: new ObjectId(),
+    default: () => new Types.ObjectId(),
   },
   reactionBody: {
     type: String,
