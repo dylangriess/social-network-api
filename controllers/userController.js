@@ -23,7 +23,7 @@ module.exports = {
   //POST a new user:
   createUser(req, res) {
     User.create(req.body)
-      .then((user) => json(user))
+      .then((user) => res.json(user))
       .catch((err) => console.log(err));
   },
   //PUT to update a user by its _id
