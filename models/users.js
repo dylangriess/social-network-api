@@ -13,10 +13,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      trim: true,
       validate: {
-        validator: function (email) {
-          return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(email);
+        validator: (email) => {
+          return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/gi.test(
+            email
+          );
         },
         message: "Please enter a valid email.",
       },
@@ -24,13 +25,13 @@ const userSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Thought",
+        ref: "thought",
       },
     ],
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
       },
     ],
   },
@@ -46,6 +47,6 @@ userSchema.virtual("friendCount").get(function () {
 });
 
 // Initialize our User model
-const User = model("User", userSchema);
+const User = model("user", userSchema);
 
 module.exports = User;

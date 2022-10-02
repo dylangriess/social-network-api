@@ -24,7 +24,7 @@ module.exports = {
   createUser(req, res) {
     User.create(req.body)
       .then((user) => json(user))
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => console.log(err));
   },
   //PUT to update a user by its _id
   updateUser(req, res) {

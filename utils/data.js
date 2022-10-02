@@ -16,17 +16,14 @@ const seedThoughts = [
   {
     thoughtText: "I need to go to the grocery store today!",
     username: "Jeffrey1",
-    userId: "",
   },
   {
     thoughtText: "Who wants Summer to end? Bring on Fall!",
     username: "Becky2",
-    userId: "",
   },
   {
     thoughtText: "This morning looks better from bed. I think I'll stay.",
     username: "Harold3",
-    userId: "",
   },
 ];
 
