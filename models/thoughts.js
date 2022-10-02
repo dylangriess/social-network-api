@@ -13,19 +13,19 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      // TODO: Use a getter method to format the timestamp on query
+      get: (date) => new Date(date).toLocaleDateString(),
     },
-    username: [
-      {
-        type: String,
-        required: true,
-      },
-    ],
+    username: {
+      type: String,
+      required: true,
+    },
+
     reactions: [reactionSchema],
   },
   {
     toJSON: {
       virtuals: true,
+      getters: true,
     },
     id: false,
   }
