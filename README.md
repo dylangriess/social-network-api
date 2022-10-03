@@ -2,9 +2,9 @@
 
 ## ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Link
+## [Walkthrough Video](https://drive.google.com/file/d/1B0ofnLeZI2rNRZDEYNPKlTHUvPuWT-xA/view)
 
-> N/A
+## ![Social Network Screenshot](https://user-images.githubusercontent.com/107587452/193482291-a745999e-a89a-4ccd-82da-3661c9aee935.png)
 
 ---
 
